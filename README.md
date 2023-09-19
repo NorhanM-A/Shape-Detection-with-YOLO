@@ -43,15 +43,13 @@ ultralytics.checks()`
 
 
 
--`!pip install roboflow`
-
--`from roboflow import Roboflow`
-
--`rf = Roboflow(api_key="Q3aYoueljqQ1S5nhgaYY")`
-
--`project = rf.workspace("hku-uas-deprecated-sobt2").project("standard_object_shape")`
-
--`dataset = project.version(2).download("yolov8")`
+```python
+!pip install roboflow
+from roboflow import Roboflow
+rf = Roboflow(api_key="Q3aYoueljqQ1S5nhgaYY")
+project = rf.workspace("hku-uas-deprecated-sobt2").project("standard_object_shape")
+dataset = project.version(2).download("yolov8")
+```
 
 
 
@@ -73,7 +71,7 @@ This code segment is responsible for exploring and analyzing a dataset, specific
 
 
 
-```
+```python
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -137,7 +135,7 @@ explore_dataset(val_dir, 'Validation')
 ![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![valid](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/d6fb1cf3-7a14-497f-be9c-e7b1f37f1ed0)
 
 ### Exploring Random Sample Images
-```
+```python
 import cv2
 import random
 
@@ -153,4 +151,68 @@ for i, image_filename in enumerate(sample_images):
     plt.title(f'Sample Image {i+1}')
 plt.show()
 ```
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![valid]
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![sample](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/7133f2ec-c3d6-4d16-b6c5-8e7b603293e5)
+
+
+### Initializing the YOLOv8 Model
+
+In this section, we demonstrate how to initialize the YOLOv8 model using the Ultralytics library. The YOLO (You Only Look Once) model is a popular deep learning model for object detection.
+
+
+
+```python
+from ultralytics import YOLO
+
+# Initialize the YOLOv8 model with pre-trained weights
+model = YOLO("yolov8n.pt")
+```
+
+
+### Training the YOLOv8 Model
+
+In this section, we demonstrate how to train the YOLOv8 model using the Ultralytics library. Training a model is a crucial step in building an accurate object detection system tailored to your specific requirements.
+
+
+
+```python
+# Train the YOLOv8 model using the provided data configuration and for a specified number of epochs
+model.train(data="/content/standard_object_shape-2/data.yaml", epochs=3)
+```
+
+### Evaluating the YOLOv8 Model
+
+### Confusion Matrix
+
+A confusion matrix is a powerful tool for assessing the performance of an object detection model. It provides a detailed breakdown of the model's predictions compared to the ground truth labels in the test dataset. The confusion matrix is divided into four quadrants:
+
+- True Positives (TP): Correctly predicted objects.
+- True Negatives (TN): Correctly predicted background (no objects).
+- False Positives (FP): Predicted objects where there are none (false alarms).
+- False Negatives (FN): Missed actual objects.
+
+The confusion matrix visually represents how well the model identifies and localizes objects.
+
+
+
+### Precision-Recall Curve
+
+The precision-recall curve is a valuable tool for evaluating the model's trade-off between precision (the fraction of true positive predictions among all positive predictions) and recall (the fraction of true positives identified correctly). It helps determine the optimal threshold for predictions based on the model's confidence scores.
+
+### Confidence Curve
+
+The confidence curve provides insights into the model's confidence levels for its predictions. By plotting confidence scores against the number of predictions, it reveals how well the model distinguishes between correct and incorrect predictions.
+
+
+### Results Plot
+
+The results plot summarizes the overall performance of the YOLOv8 model on the test dataset. It typically includes metrics such as precision, recall, F1-score, and average precision (AP). This plot offers a comprehensive overview of the model's object detection performance.
+
+
+
+
+
+
+
+
+
+
