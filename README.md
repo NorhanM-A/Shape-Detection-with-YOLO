@@ -192,27 +192,42 @@ A confusion matrix is a powerful tool for assessing the performance of an object
 
 The confusion matrix visually represents how well the model identifies and localizes objects.
 
-
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![confusionmatrix](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/8912aed2-14df-4b2f-bc4f-a9bdcc299397)
 
 ### Precision-Recall Curve
 
 The precision-recall curve is a valuable tool for evaluating the model's trade-off between precision (the fraction of true positive predictions among all positive predictions) and recall (the fraction of true positives identified correctly). It helps determine the optimal threshold for predictions based on the model's confidence scores.
-
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![pr](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/7afa779c-b2ff-41fb-9185-071dbe4c6fa2)
 ### Confidence Curve
 
 The confidence curve provides insights into the model's confidence levels for its predictions. By plotting confidence scores against the number of predictions, it reveals how well the model distinguishes between correct and incorrect predictions.
 
-
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![confidencecurve](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/33420aad-a7c9-416a-a428-1a6e576896d6)
 ### Results Plot
 
 The results plot summarizes the overall performance of the YOLOv8 model on the test dataset. It typically includes metrics such as precision, recall, F1-score, and average precision (AP). This plot offers a comprehensive overview of the model's object detection performance.
 
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![results](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/4c386318-81cc-4ef5-86ab-5b8f60e9e609)
 
 
+### Initializing the Object Detection Model
+
+The following code initializes an object detection model based on the YOLO architecture and loads pre-trained weights for inference:
+
+```python
+infer = YOLO("/content/runs/detect/train/weights/best.pt")
+```
+- YOLO: This code utilizes the YOLO class from an object detection framework.
+- "/content/runs/detect/train/weights/best.pt": This path specifies the location of the pre-trained weights file that the model will use for inference. Pre-trained weights contain learned parameters from a model trained on a large dataset, enabling it to make predictions without further training.
 
 
+### Performing Object Detection on Test Images
 
+The following code performs object detection on a set of test images using the previously initialized object detection model:
 
+```python
+infer.predict("/content/standard_object_shape-2/test/images", save=True, save_txt=True)
+```
 
 
 
