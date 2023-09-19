@@ -132,7 +132,9 @@ explore_dataset(val_dir, 'Validation')
 
 ```
 
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git](https://github.com/your-username/your-repo/raw/main/path/to/your-image.jpg)
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
 
 
 
