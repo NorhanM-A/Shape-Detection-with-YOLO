@@ -132,6 +132,9 @@ explore_dataset(val_dir, 'Validation')
 
 ```
 
+![Alt Text](https://github.com/your-username/your-repo/raw/main/path/to/your-image.jpg)
+
+
 
 
 
