@@ -133,11 +133,24 @@ explore_dataset(val_dir, 'Validation')
 ```
 
 ![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![test](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/5c5a4210-5482-476a-9c63-1015a14b91d1)
+![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![valid](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/d6fb1cf3-7a14-497f-be9c-e7b1f37f1ed0)
 
+### Exploring Random Sample Images
+```
+import cv2
+import random
 
-
-
-
+# Load and display random sample images
+sample_images = random.sample(os.listdir(os.path.join(train_dir, 'images')), 5)  # Display 5 random images
+plt.figure(figsize=(15, 5))
+for i, image_filename in enumerate(sample_images):
+    image = cv2.imread(os.path.join(train_dir, 'images', image_filename))
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    plt.subplot(1, 5, i+1)
+    plt.imshow(image)
+    plt.axis('off')
+    plt.title(f'Sample Image {i+1}')
+plt.show()
+```
 
