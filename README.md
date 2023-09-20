@@ -130,9 +130,9 @@ explore_dataset(val_dir, 'Validation')
 
 ```
 
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![test](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/5c5a4210-5482-476a-9c63-1015a14b91d1)
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![valid](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/d6fb1cf3-7a14-497f-be9c-e7b1f37f1ed0)
+![train](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/c2a09bad-3b78-44eb-9a98-fb555648ff88)
+![test](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/5c5a4210-5482-476a-9c63-1015a14b91d1)
+![valid](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/d6fb1cf3-7a14-497f-be9c-e7b1f37f1ed0)
 
 ### Exploring Random Sample Images
 ```python
@@ -151,7 +151,7 @@ for i, image_filename in enumerate(sample_images):
     plt.title(f'Sample Image {i+1}')
 plt.show()
 ```
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![sample](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/7133f2ec-c3d6-4d16-b6c5-8e7b603293e5)
+![sample](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/7133f2ec-c3d6-4d16-b6c5-8e7b603293e5)
 
 
 ### Initializing the YOLOv8 Model
@@ -192,22 +192,22 @@ A confusion matrix is a powerful tool for assessing the performance of an object
 
 The confusion matrix visually represents how well the model identifies and localizes objects.
 
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![confusionmatrix](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/8912aed2-14df-4b2f-bc4f-a9bdcc299397)
+![confusionmatrix](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/8912aed2-14df-4b2f-bc4f-a9bdcc299397)
 
 ### Precision-Recall Curve
 
 The precision-recall curve is a valuable tool for evaluating the model's trade-off between precision (the fraction of true positive predictions among all positive predictions) and recall (the fraction of true positives identified correctly). It helps determine the optimal threshold for predictions based on the model's confidence scores.
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![pr](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/7afa779c-b2ff-41fb-9185-071dbe4c6fa2)
+![pr](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/7afa779c-b2ff-41fb-9185-071dbe4c6fa2)
 ### Confidence Curve
 
 The confidence curve provides insights into the model's confidence levels for its predictions. By plotting confidence scores against the number of predictions, it reveals how well the model distinguishes between correct and incorrect predictions.
 
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![confidencecurve](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/33420aad-a7c9-416a-a428-1a6e576896d6)
+![confidencecurve](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/33420aad-a7c9-416a-a428-1a6e576896d6)
 ### Results Plot
 
 The results plot summarizes the overall performance of the YOLOv8 model on the test dataset. It typically includes metrics such as precision, recall, F1-score, and average precision (AP). This plot offers a comprehensive overview of the model's object detection performance.
 
-![https://github.com/NorhanM-A/Shape-Detection-with-YOLO.git]![results](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/4c386318-81cc-4ef5-86ab-5b8f60e9e609)
+![results](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/4c386318-81cc-4ef5-86ab-5b8f60e9e609)
 
 
 ### Initializing the Object Detection Model
@@ -229,5 +229,27 @@ The following code performs object detection on a set of test images using the p
 infer.predict("/content/standard_object_shape-2/test/images", save=True, save_txt=True)
 ```
 
+
+
+
+
+## Predicted Images
+
+In the following section, we explore visual results of object detection on the test images using the YOLOv8 model. These images have been annotated with bounding boxes, highlighting the detected shapes. These visualizations provide insights into the model's performance on real-world data.
+
+
+
+The following images display the model's predictions:
+
+![p10](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/66babfea-c834-4a5d-9cb0-4a111c705777)
+![p1](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/0e613a53-7648-4c48-9c49-a93ec9881aa9)
+![p2](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/2b60f08e-6bc1-4448-8b2a-dc1e7a58de6e)
+![p3](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/9b417445-5511-44a5-b98a-840f8376179b)
+![p4](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/28451b96-5a5c-4cc1-bb4b-2497c7a35b58)
+![p5](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/24a9d977-05ce-4c39-8489-a80e3e8fec68)
+![p6](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/236eff8c-2953-4ded-815b-f0709da25e27)
+![p7](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/9bbc28bb-3f2e-4ca6-b7c8-6ce27cd8001f)
+![p8](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/5fbc78f0-1356-4278-a57c-0b60a9e3ce51)
+![p9](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/04375db7-623f-4cd3-babb-72c6df2f877c)
 
 
