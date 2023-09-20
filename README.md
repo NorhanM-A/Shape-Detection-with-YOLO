@@ -1,5 +1,25 @@
-# Shape-Detection-with-YOLO
-Shape Detection with YOLO: A computer vision project that employs YOLO, a state-of-the-art deep learning framework, to accurately identify and locate various geometric shapes in images. Perfect for applications such as drone-based surveillance and object recognition.
+## Choosing YOLOv8
+
+### YOLOv8 Shape Detection
+
+Welcome to the YOLOv8 Shape Detection project! In this repository, I've implemented a shape detection model using YOLOv8, specifically tailored for shape detection. 
+
+## Why YOLOv8?
+
+When embarking on this project, I carefully considered various object detection models available in the computer vision landscape. YOLOv8 stood out as the ideal choice for several compelling reasons:
+
+1. **State-of-the-Art Performance:** YOLOv8 is a state-of-the-art object detection model renowned for its remarkable accuracy and speed. Its multi-scale architecture allows it to detect objects of varying sizes efficiently.
+
+2. **Versatility:** YOLOv8 is versatile and can be adapted to a wide range of object detection tasks. Whether you're detecting shapes in aerial imagery, identifying objects in real-time video streams, or any other computer vision application, YOLOv8's flexibility is a significant asset.
+
+3. **Community Support:** YOLOv8 benefits from a vibrant open-source community. With an active developer community and ongoing updates, it's easy to find resources, tutorials, and pre-trained models to kickstart your project.
+
+4. **Efficiency:** YOLOv8 has been designed with efficiency in mind. Its ability to achieve impressive detection results on resource-constrained devices makes it a practical choice for real-world applications.
+
+5. **Robustness:** YOLOv8's robustness in handling occlusions, various lighting conditions, and complex scenes ensures reliable object detection performance.
+
+
+
 
 
 
@@ -205,7 +225,6 @@ The confidence curve provides insights into the model's confidence levels for it
 ![confidencecurve](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/33420aad-a7c9-416a-a428-1a6e576896d6)
 ### Results Plot
 
-The results plot summarizes the overall performance of the YOLOv8 model on the test dataset. It typically includes metrics such as precision, recall, F1-score, and average precision (AP). This plot offers a comprehensive overview of the model's object detection performance.
 
 ![results](https://github.com/NorhanM-A/Shape-Detection-with-YOLO/assets/72838396/4c386318-81cc-4ef5-86ab-5b8f60e9e609)
 
