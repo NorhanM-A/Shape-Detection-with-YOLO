@@ -1,0 +1,24 @@
+names:
+- CIRCLE
+- CROSS
+- HEPTAGON
+- HEXAGON
+- OCTAGON
+- PENTAGON
+- QUARTER_CIRCLE
+- RECTANGLE
+- SEMICIRCLE
+- SQUARE
+- STAR
+- TRAPEZOID
+- TRIANGLE
+nc: 13
+roboflow:
+  license: CC BY 4.0
+  project: standard_object_shape
+  url: https://universe.roboflow.com/hku-uas-deprecated-sobt2/standard_object_shape/dataset/2
+  version: 2
+  workspace: hku-uas-deprecated-sobt2
+test: /content/standard_object_shape-2/test/images
+train: /content/standard_object_shape-2/train/images
+val: /content/standard_object_shape-2/valid/images
